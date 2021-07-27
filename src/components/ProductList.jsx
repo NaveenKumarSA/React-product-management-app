@@ -18,7 +18,7 @@ export default function ProductList({ ...props }) {
   }, []);
 
   return (
-    <div className="ml-4">
+    <div className="ml-4 ">
       <section>
         <div className="container text-end">
           <button className="btn btn-outline btn-outline-secondary" onClick={()=>props.handleCreate()}>
@@ -28,25 +28,25 @@ export default function ProductList({ ...props }) {
         </div>
       </section>
       {isProductListReady && (
-        <section>
-          <table class="table table-striped table-hover">
+        <section className="prod-list-table-wrapper">
+          <table class="table table-striped table-hover prod-list-table ">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Image</th>
-                <th scope="col">Created </th>
-                <th scope="col">Updated </th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col-1">#</th>
+                <th scope="col-2">Name</th>
+                <th scope="col-2">Description</th>
+                <th scope="col-2" >Image</th>
+                <th scope="col-2" >Created </th>
+                <th scope="col-2" >Updated </th>
+                <th scope="col-2" ></th>
+                <th scope="col-2" ></th>
               </tr>
             </thead>
             <tbody>
               {product_list.map((item, key) => {
                 return (
                   <tr className="list-row">
-                    <th scope="row">{key + 1} </th>
+                    <th >{key + 1} </th>
                     <td className="list-name justify-center">
                       <div className="container list-description-container">
                         {item.name}

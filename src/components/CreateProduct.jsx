@@ -27,6 +27,7 @@ export default function CreateProduct({ ...props }) {
 
               <input
                 type="text"
+                required
                 className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
@@ -53,6 +54,7 @@ export default function CreateProduct({ ...props }) {
 
               <textarea
                 type="text"
+                required
                 className="form-control"
                 id="update_prod_description"
                 placeholder="Please write what the coustemer wants to see..."

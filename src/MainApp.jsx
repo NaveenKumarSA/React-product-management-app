@@ -87,40 +87,41 @@ function MainApp() {
   /* handle the create action  */
   const handleUpdateAction = (prod) => {
     /* create new object and assign the values from the args  */
-    console.log("handle Update prod", prod)
-    console.log("update_product",update_product)
+    console.log("handle Update prod", prod);
+    console.log("update_product", update_product);
     var updateProduct = {
       id: update_product.id,
-      name: prod.prod_Name === "" ? update_product.name : prod.prod_Name ,
-      image:update_product.image === prod.prod_Image.name ?  update_product.image : prod.prod_Image.name,
-      description: prod.prod_desc === "" ? update_product.description : prod.prod_desc,
-      created_at:  update_product.created_at,
+      name: prod.prod_Name === "" ? update_product.name : prod.prod_Name,
+      image:
+        update_product.image === prod.prod_Image.name
+          ? update_product.image
+          : prod.prod_Image.name,
+      description:
+        prod.prod_desc === "" ? update_product.description : prod.prod_desc,
+      created_at: update_product.created_at,
       updated_at: time[0],
     };
-   
-    var updated = prod_obj.list_items
-    var elementIndex = prod_obj.list_items.indexOf(update_product)
 
-    if(elementIndex !== -1)
-    updated[elementIndex] = updateProduct
-    
+    var updated = prod_obj.list_items;
+    var elementIndex = prod_obj.list_items.indexOf(update_product);
+
+    if (elementIndex !== -1) updated[elementIndex] = updateProduct;
+
     setprod_obj({ list_items: updated });
     setislist_ready(false);
-    setTimeout(() => {  }, 500); 
-      setislist_ready(true);
-      setis_update_product(false);
-  
+    setTimeout(() => {}, 500);
+    setislist_ready(true);
+    setis_update_product(false);
   };
 
   return (
     <div className="App">
       <div className="container text-center display-3 mt-4">
         <p className="title-text">
-          {" "}
-          Product{" "}
+          Product  
           <span className="text-danger">
             <AllInclusiveIcon />
-          </span>{" "}
+          </span>  
           Management
         </p>
       </div>
@@ -145,7 +146,11 @@ function MainApp() {
             <ViewProduct prod={view_product} isReady={is_view_product} />
           )}
           {is_update_product && (
-            <UpdateProduct prod={update_product} isReady={is_update_product} handleUpdateAction={handleUpdateAction} />
+            <UpdateProduct
+              prod={update_product}
+              isReady={is_update_product}
+              handleUpdateAction={handleUpdateAction}
+            />
           )}
           {is_create_product && (
             <CreateProduct
@@ -155,6 +160,23 @@ function MainApp() {
           )}
         </Grid>
       </Grid>
+      <div className="container">
+        <p>
+          Note: Kind info, as this project is functioning without any server. You may not
+          able to see the picture you uploaded
+        </p>
+      </div>
+      <div className="container-fluid mb-4">
+        Copyrights@{" "}
+        <span>
+          {" "}
+          <a href="http://github.com/NaveenKumarSA/React-product-management-app">
+            {" "}
+            Naveen Kumar SA ( github Repo link )
+          </a>{" "}
+        </span>
+   
+      </div>
     </div>
   );
 }

@@ -22,7 +22,15 @@ label {
 tr.list-row {
   vertical-align: middle;
 }
+section.prod-list-table-wrapper {
+  overflow-x: scroll;
+ /* max-width: 100% !important; */
+}
 
+.prod-list-table {
+  /* max-width: 400px; */
+  /* width: 100% !important; */
+}
 /* default */
 .App {
   text-align: center;
