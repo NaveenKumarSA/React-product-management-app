@@ -1,3 +1,29 @@
+/* custom */
+
+.list-description-container {
+  white-space: wrap;
+  height: 25px;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-name {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+label {
+  text-transform: uppercase;
+  font-weight: 700 !important;
+}
+.theme-vertical-align-center {
+}
+
+tr.list-row {
+  vertical-align: middle;
+}
+
+/* default */
 .App {
   text-align: center;
 }
