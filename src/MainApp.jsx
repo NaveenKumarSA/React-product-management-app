@@ -118,10 +118,10 @@ function MainApp() {
     <div className="App">
       <div className="container text-center display-3 mt-4">
         <p className="title-text">
-          Product  
+          Product
           <span className="text-danger">
             <AllInclusiveIcon />
-          </span>  
+          </span>
           Management
         </p>
       </div>
@@ -162,8 +162,8 @@ function MainApp() {
       </Grid>
       <div className="container">
         <p>
-          Note: Kind info, as this project is functioning without any server. You may not
-          able to see the picture you uploaded
+          Note: Kind info, as this project is functioning without any server.
+          You may not able to see the picture you uploaded
         </p>
       </div>
       <div className="container-fluid mb-4">
@@ -175,7 +175,6 @@ function MainApp() {
             Naveen Kumar SA ( github Repo link )
           </a>{" "}
         </span>
-   
       </div>
     </div>
   );
